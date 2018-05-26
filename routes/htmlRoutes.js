@@ -30,6 +30,15 @@ router.post('/S3', parser.single('selectedFile'), function (req, res) {
       caption: req.body.caption,
       EventId: req.body.storyId
     }).then(function(dbEvent) {
+      // db.Event.update({ 
+      //   updatedAt: dbEvent.dataValues.updatedAt },
+      // {
+      //   where:
+      //   {
+      //     id: dbEvent.dataValues.EventId
+      //   }
+      // });
+
       console.log("dataValues updatedAt: ", dbEvent.dataValues.updatedAt);
       console.log("dataValues EventId: ", dbEvent.dataValues.EventId);
       res.json(dbEvent);

@@ -28,7 +28,8 @@ class AddPhotoS3 extends Component{
             selectedFile: '',
             storyId: this.props.storyId,
             title: this.props.title,
-            image: ''
+            image: '',
+            loading: false
         };
         console.log("props");
         console.log(props);
@@ -59,7 +60,7 @@ class AddPhotoS3 extends Component{
         formData.append('selectedFile', selectedFile);
         formData.append('storyId', this.state.storyId);
         formData.append('title', this.state.title);
-
+        this.setState({ loading: true })
         axios.post('/S3/S3', formData)
           .then((result) => {
             // access results...
@@ -72,7 +73,7 @@ class AddPhotoS3 extends Component{
 
       render() {
         const { caption, selectedFile } = this.state;
-        return (
+        return (!this.state.loading) ? ( 
           <div>
           <form encType="multipart/form-data" onSubmit={this.onSubmit}>
                 
@@ -110,7 +111,7 @@ class AddPhotoS3 extends Component{
             </CloudinaryContext> */}
 
           </div>
-        );
+        ) : <div><p>Posting your moment...</p><img src="/spinner.gif"/></div>;
       }
 
 }

@@ -79,7 +79,7 @@ var db = require("../models");
       where: {
         EventId: req.params.id
       },
-      order: [['updatedAt', 'DESC']],
+      order: [['updatedAt', 'ASC']],
       
     }).then(function(dbEvent){
       console.log(dbEvent);
