@@ -65,6 +65,7 @@ class AddPhotoS3 extends Component{
             // access results...
             this.setState({image: result.data.moment});
             console.log("completed post promise");
+            window.location.href="/";
             console.log(result);
           });
       }
@@ -98,15 +99,15 @@ class AddPhotoS3 extends Component{
             />
             <br />
             <br />
-            <Link
-              to="/">
+            {/* <Link
+              to="/"> */}
               <button type="button" onClick={this.onSubmit} className="btn btn-success">Submit</button>
-            </Link>
+            {/* </Link> */}
           </form>
 
-            <CloudinaryContext cloudName="tryp-ninja">
+            {/* <CloudinaryContext cloudName="tryp-ninja">
             {this.state.image ? <Image publicId={this.state.image} fetchFormat="auto"/> : null}
-            </CloudinaryContext>
+            </CloudinaryContext> */}
 
           </div>
         );
