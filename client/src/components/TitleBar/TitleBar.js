@@ -39,7 +39,7 @@ function TitleBar(props) {
               className={window.location.pathname === "/add" ? "nav-link active" : "nav-link"}>
               <Typography variant="title" className={classes.title}>
               <img src={logo} height={40} width={40} alt="ninjaGuy"/>
-                Tryp Ninja
+              <span style={{marginLeft: 10}}>Tryp Ninja</span>
               </Typography>
             </Link>
             </div>

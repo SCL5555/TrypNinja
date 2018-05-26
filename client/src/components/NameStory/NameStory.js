@@ -103,16 +103,7 @@ render() {
               Add a moment now
             </button>
           </Grid>
-          <Grid item xs>
-              <button 
-                type="submit" 
-                className="btn btn-primary mb-2"
-                id="submit-btn-now"
-                onClick={this.onClick}
-              >
-                Don't add a moment
-              </button>
-          </Grid>
+
           <Grid item xs>
               <button 
                 type="submit" 
