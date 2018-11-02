@@ -13,7 +13,7 @@ This application has been built as a full-stack application. The `React` framewo
 <strong>TrypNinja</strong> fills the gap in existing social media sites by allowing users to create a COMPLETE story and publishing it for others to see.  Stories are comprised photos and text.
 
 ### How to Use the App<hr/>
-1. <strong>Step 1:</strong> Open the application
+1. <strong>Step 1:</strong> Open the application. https://tryp-ninja.herokuapp.com
 1. <strong>Step 2:</strong> Login with your Google account
 1. <strong>Step 3:</strong> Choose a new story by clicking on the `plus` button or add to an open story by clicking on the story button.
 ### Potential Future Features<hr/>
